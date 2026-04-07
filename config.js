@@ -1,84 +1,97 @@
 window.COMPANY = {
-  name: "Zuniga's Plumbing Inc.",
-  shortName: "Zuniga's Plumbing",
-  founderName: "Walter Zuniga",
-  yearsInBusiness: 50,
+  name: "Nuzzo Sewer & Plumbing",
+  shortName: "Nuzzo Plumbing",
+  founderName: "Len Nuzzo",
+  yearsInBusiness: 78,
   city: "Chicago",
-  phone: "(773) 619-2730",
-  phoneRaw: "7736192730",
-  email: "zunigaplumbing@yahoo.com",
+  phone: "(773) 625-6280",
+  phoneRaw: "7736256280",
+  secondaryPhone: "(708) 456-7300",
+  secondaryPhoneRaw: "7084567300",
+  secondaryPhoneLabel: "Suburban Line",
+  email: "",
   address: {
-    street: "7253 S. Green Street",
+    street: "8619 W Leland Ave",
     city: "Chicago",
     state: "IL",
-    zip: "60621",
-    full: "7253 S. Green Street, Chicago, IL 60621"
+    zip: "60656",
+    full: "8619 W Leland Ave, Chicago, IL 60656"
   },
-  hours: "Mon–Fri: 8:00am – 5:00pm",
-  licenseCity: "058170465",
-  licenseState: "055031744",
-  bbbSince: "2006",
+  hours: "Emergency service available. Call for appointment scheduling.",
+  licenseCity: "PC# 14636",
+  licenseState: "Licensed, Bonded & Insured",
+  bbbSince: "Serving Chicago Since 1948",
   meta: {
-    title: "Zuniga's Plumbing Inc. | Professional Chicago Plumbers",
-    description: "Expert plumbing and heating for residential and commercial properties in Chicago. Serving the community for over 50 years."
+    title: "Nuzzo Sewer & Plumbing | Chicago Plumbing & Sewer Service Since 1948",
+    description: "Family-owned plumbing, sewer, flood-control, and remodeling service in Chicago and the northwest suburbs. Free estimates, licensed work, and emergency availability."
   },
-  heroBadge: "Serving Chicago for 50+ Years",
-  heroSub: "Full service plumbing and heating for residential and commercial properties in Chicago. Licensed, bonded, and insured.",
-  heroLocation: "Serving Chicago, Berwyn, Oak Park, Evanston & suburbs",
-  heroPromise: "We call back within 15 minutes · Same-day appointments available",
+  heroBadge: "Serving Chicago & the Northwest Suburbs Since 1948",
+  heroSub: "Family-owned plumbing, sewer, flood-control, and remodeling service for homes, businesses, and industrial buildings across Chicago and the nearby suburbs.",
+  heroLocation: "Serving Chicago, Elmwood Park, Des Plaines & nearby suburbs",
+  heroPromise: "Emergency service available · Same-day appointments on most calls",
   stats: {
-    years: 50,
-    reviewCount: 200,
-    callbackMin: 15
+    years: 78,
+    reviewCount: 28,
+    callbackMin: 90
   },
   reviewBadges: [
-    { platform: "Google", rating: "4.9", count: "74 reviews" },
-    { platform: "Yelp", rating: "4.8", count: "42 reviews" },
-    { platform: "BBB", rating: "A+", count: "Since 2006" }
+    { platform: "Yelp", rating: "4.5", count: "28 reviews", theme: "yelp" },
+    { platform: "Since", rating: "1948", count: "Family-owned", theme: "default" },
+    { platform: "PC#", rating: "14636", count: "Licensed & insured", theme: "bbb" }
   ],
   reviews: [
-    { text: "Walter is a fair, skilled and honest plumber. He found me a great price and I would recommend him to anyone.", author: "David W., Chicago", source: "Google" },
-    { text: "Asked for photos for an accurate quote and completed the job same day. I will use them again for all my plumbing needs!", author: "Verified Customer", source: "Networx" },
-    { text: "Friendly, reasonable, and honest! Prompt and professional. Explained everything in detail. Excellent licensed plumbers.", author: "Verified Customer, Chicago", source: "BBB" },
-    { text: "They responded fast, showed up on time, and fixed the leak the same day. Highly recommend Zuniga's!", author: "Maria L., Cicero", source: "Google" },
-    { text: "Used them for a basement flood — they were there within the hour. Amazing service and fair pricing.", author: "James R., Oak Park", source: "Yelp" },
-    { text: "50 years in business for a reason. Trustworthy, knowledgeable, and they stand by their work.", author: "Sandra K., Berwyn", source: "Google" },
-    { text: "On time, professional, and cleaned up after themselves. Will call them for every plumbing issue.", author: "Tony G., Chicago", source: "Google" },
-    { text: "Very honest and upfront with pricing. No surprises on the bill. The work was done perfectly.", author: "Rosa M., Evanston", source: "Networx" },
-    { text: "Water heater went out on a Saturday morning — they had it replaced by noon. Incredible response time.", author: "Kevin D., Skokie", source: "BBB" },
-    { text: "I've used Zuniga's three times now. Always the same great quality and honest service.", author: "Anna F., Chicago", source: "Yelp" },
-    { text: "Best plumbers in the city. Explained the issue clearly and fixed it faster than I expected.", author: "Michael T., River North", source: "Google" },
-    { text: "My landlord uses them for the whole building. Most reliable plumbers I've ever dealt with.", author: "Carlos V., Logan Square", source: "Google" }
+    { text: "Len and his assistant came out right away and were helpful, careful, quick, and efficient.", author: "Sarah C., Chicago", source: "Nuzzo site review" },
+    { text: "These are my guys. Reliable and reasonable.", author: "Jake Elkins-Ryan, Chicago", source: "Nuzzo site review" },
+    { text: "Very dependable, fair, and trustworthy. I have called Nuzzo several times and would absolutely recommend them.", author: "Matt Lane, Chicago", source: "Nuzzo site review" },
+    { text: "Len arrived quickly, fixed a problem two other plumbers quoted far higher, and solved it in under an hour.", author: "Mark C., Norwood Park", source: "Yahoo local review" },
+    { text: "We have had several repairs done by Nuzzo and they have always been prompt and honest in their dealings.", author: "John M., Chicago", source: "Yahoo local review" },
+    { text: "For sewer work, flood-control concerns, and everyday plumbing repairs, the team is experienced and easy to work with.", author: "Local customer, Elmwood Park", source: "Public review summary" }
   ],
   serviceArea: {
     primary: "Chicago",
-    cities: ["Berwyn", "Oak Park", "Evanston", "Cicero", "Maywood", "Harvey", "Hillside", "Broadview", "Forest Park", "River Grove", "Lyons", "Bridgeview", "Calumet City", "South Holland", "Homewood", "Evergreen Park", "Chicago Ridge", "Worth", "Hazel Crest"]
+    cities: ["Elmwood Park", "Des Plaines", "Forest Park", "Harwood Heights", "Morton Grove", "Niles", "Norridge", "Oak Park", "Park Ridge", "River Forest", "River Grove", "Rosemont", "Schiller Park"]
   },
   services: [
-    { name: "Drain Cleaning", desc: "Power rodding, hydro jetting, and full drain cleaning for all blockages in showers, sinks, and floor drains." },
-    { name: "Faucet & Toilet Repair", desc: "Fast diagnosis and repair of leaky faucets, running toilets, and fixture replacements for kitchens and bathrooms." },
-    { name: "Sewer Line Replacement", desc: "Full sewer line replacement, underground repair, water main installation, and video camera sewer inspection." },
-    { name: "Gas Leak Detection", desc: "Don't wait on a gas leak. Our team handles detection, repair, and violation correcting quickly and safely." },
-    { name: "Sump & Ejector Pumps", desc: "Installation, repair, and overhead sewer systems to protect your Chicago basement from flooding." },
-    { name: "Kitchen & Bath Remodeling", desc: "Full plumbing for bathroom and kitchen remodels, water pressure boosts, and appliance hookups." }
+    { name: "Drain Cleaning & Power Rodding", desc: "Professional drain clearing and power rodding for sinks, tubs, floor drains, and main lines." },
+    { name: "Fixture & Water Heater Repairs", desc: "Repair and replacement for toilets, sinks, faucets, tubs, showers, and water heaters." },
+    { name: "Sewer Repairs & Video Inspection", desc: "Sewer service, cleanout installation, pipe locating, and camera inspection for difficult line issues." },
+    { name: "Flood Control & Pump Systems", desc: "Flood-control systems, sump pumps, ejector pumps, and catch basin work to help protect your property." },
+    { name: "Water Lines & Pressure Repair", desc: "Broken water lines, low pressure diagnosis, and underground water work for homes and businesses." },
+    { name: "Kitchen & Bath Remodeling", desc: "Rough-in and finish plumbing for remodeling projects, fixture upgrades, and rehab work." }
+  ],
+  howItWorks: [
+    {
+      title: "Call the Right Office",
+      desc: "Use our Chicago or suburban line and tell us whether you have an emergency, sewer issue, plumbing repair, or a larger project."
+    },
+    {
+      title: "Get a Free Estimate",
+      desc: "We talk through the problem, confirm the service area, and help you line up the right next step with no-pressure estimating."
+    },
+    {
+      title: "Licensed Work Done Right",
+      desc: "Our team completes the repair or installation with experienced workmanship, clean habits, and local accountability."
+    }
   ],
   faq: [
-    { q: "Do you offer free estimates?", a: "Yes — free quotes on all jobs. Call or fill out the contact form and we'll get back within 15 minutes." },
-    { q: "Are you licensed and insured?", a: "City of Chicago License: 058170465 · Illinois State License: 055031744. Fully bonded and insured." },
-    { q: "Do you offer same-day service?", a: "Yes. Trucks stocked daily. Most jobs are completed in a single visit." },
-    { q: "What areas do you serve?", a: "Chicago and all surrounding suburbs — Berwyn, Oak Park, Evanston, Cicero, Maywood, Bridgeview, Calumet City, South Holland, and more." },
-    { q: "Do you handle residential and commercial?", a: "Yes — homes, commercial buildings, industrial properties, and high-rises throughout Chicago." }
+    { q: "Do you offer free estimates?", a: "Yes. Nuzzo Sewer & Plumbing offers free estimates. Call either office line and we will help you schedule the right next step." },
+    { q: "Are you licensed and insured?", a: "Yes. Nuzzo Sewer & Plumbing lists the business as licensed, bonded, and insured and publishes license number PC# 14636." },
+    { q: "Do you offer same-day service?", a: "Yes. Same-day appointments are often available depending on timing, scope, and crew availability." },
+    { q: "What areas do you serve?", a: "Chicago and nearby suburbs including Des Plaines, Elmwood Park, Forest Park, Harwood Heights, Morton Grove, Niles, Norridge, Oak Park, Park Ridge, River Forest, River Grove, Rosemont, and Schiller Park." },
+    { q: "Do you handle residential and commercial work?", a: "Yes. Nuzzo markets plumbing and sewer services for homes, businesses, and industrial buildings." },
+    { q: "What specialties does Nuzzo highlight?", a: "The company highlights plumbing repairs and installations, sewer repairs, power rodding, flood control, remodeling plumbing, pumps, and water line work." }
   ],
   reputation: {
-    title: "Built on 50 Years of Trust",
-    intro: "Chicago's go-to plumber since 1975 — not because of marketing, because of results. Every job, every time.",
+    title: "Built on 78 Years of Trust",
+    intro: "Chicago customers keep calling Nuzzo because the work is licensed, straightforward, and backed by decades of local experience.",
     trustItems: [
-      { title: "Licensed & Bonded", text: "City & State licensed. Fully insured for residential and commercial." },
-      { title: "Same-Day Service", text: "Trucks stocked daily. Most jobs done in one visit." },
-      { title: "Honest Pricing", text: "Free quotes. No hidden fees. No surprises." },
-      { title: "Owner-Operated", text: "Walter Zuniga personally oversees every job." }
+      { title: "Family-Owned Since 1948", text: "Three generations of plumbing experience rooted in Chicago neighborhoods and nearby suburbs." },
+      { title: "Licensed & Insured", text: "Published license information, bonded work, and professional service for residential and commercial jobs." },
+      { title: "Sewer & Flood-Control Specialists", text: "Experienced with sewer repairs, video inspections, pumps, catch basins, and related urgent problems." },
+      { title: "Free Estimates", text: "Clear next steps and no-pressure estimating before the work gets underway." }
     ]
   },
-  ticker: ["Drain Cleaning", "Sewer Line Replacement", "Gas Leak Detection", "Frozen Pipe Repair", "Sump & Ejector Pumps", "Video Camera Inspection", "Kitchen & Bath Remodeling", "Water Pressure Boost", "Power Rodding", "Grease Trap Cleaning"],
+  ticker: ["Drain Cleaning", "Power Rodding", "Sewer Repairs", "Flood Control", "Water Heaters", "Sump Pumps", "Water Lines", "Kitchen Remodeling", "Bathroom Remodeling", "Video Inspection"],
+  schemaServices: ["Plumbing repairs", "Drain cleaning", "Power rodding", "Sewer repairs", "Flood control", "Water lines", "Kitchen remodeling plumbing", "Bathroom remodeling plumbing"],
   footerCopyright: "2026"
 };

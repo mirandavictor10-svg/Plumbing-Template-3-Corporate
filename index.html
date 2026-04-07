@@ -4,8 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" id="metaDescription" content="">
-<title id="pageTitle">Zuniga's Plumbing Inc. | Professional Chicago Plumbers</title>
+<title id="pageTitle">Nuzzo Sewer & Plumbing | Chicago Plumbing & Sewer Service Since 1948</title>
 <script src="config.js"></script>
+<script id="localBusinessSchema" type="application/ld+json"></script>
+<script id="faqSchema" type="application/ld+json"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 <style>
   *{margin:0;padding:0;box-sizing:border-box;}
@@ -112,6 +114,13 @@
   .service-desc{font-size:13px;color:#697386;line-height:1.55;}
   .service-link{font-size:13px;color:#0570de;font-weight:500;margin-top:14px;display:block;opacity:0;transform:translateX(-6px);transition:opacity 0.2s,transform 0.2s;}
   .service-card:hover .service-link{opacity:1;transform:translateX(0);}
+
+  /* HOW IT WORKS */
+  .steps-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;max-width:980px;margin:0 auto;}
+  .step-card{background:#0a2540;border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:28px;box-shadow:0 24px 60px rgba(10,37,64,0.12);}
+  .step-num{width:44px;height:44px;border-radius:50%;background:#0570de;color:#fff;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:700;margin-bottom:18px;}
+  .step-title{font-size:20px;font-weight:700;color:#fff;letter-spacing:-0.4px;margin-bottom:10px;}
+  .step-desc{font-size:14px;line-height:1.7;color:rgba(255,255,255,0.68);}
 
   /* WAVE DIVIDERS */
   .wave-divider{display:block;width:100%;overflow:hidden;line-height:0;}
@@ -279,10 +288,10 @@
 
 <!-- STICKY CALL BAR -->
 <div class="sticky-bar" id="stickyBar">
-  <div class="sticky-bar-left">Need a plumber? <span id="stickyPromise">We call back within 15 minutes</span></div>
+  <div class="sticky-bar-left">Need a plumber? <span id="stickyPromise">Emergency service available</span></div>
   <div style="display:flex;align-items:center;gap:12px;">
     <a class="sticky-phone" id="stickyPhone" href="tel:7736192730">(773) 619-2730</a>
-    <button class="sticky-btn">Call Now</button>
+    <button class="sticky-btn" onclick="window.location.href='tel:7736256280'">Call Now</button>
   </div>
 </div>
 
@@ -308,23 +317,23 @@
 <section class="hero" id="hero">
   <div class="hero-orb1"></div>
   <div class="hero-orb2"></div>
-  <div class="hero-badge anim-fade-in d1" id="heroBadge">★ Serving Chicago for 50+ Years</div>
+  <div class="hero-badge anim-fade-in d1" id="heroBadge">★ Serving Chicago & the Northwest Suburbs Since 1948</div>
   <div class="hero-typing-wrap anim-fade-up d2"><div class="hero-typing" id="typingText"></div></div>
   <div class="hero-static anim-fade-up d3">We Can Fix That.</div>
-  <p class="hero-sub anim-fade-up d3" id="heroSub">Full service plumbing and heating for residential and commercial properties in Chicago. Licensed, bonded, and insured.</p>
+  <p class="hero-sub anim-fade-up d3" id="heroSub">Family-owned plumbing, sewer, flood-control, and remodeling service for homes, businesses, and industrial buildings across Chicago and the nearby suburbs.</p>
   <div class="hero-promise anim-fade-up d3">
     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#4ade80" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
-    <span id="heroPromise">We call back within 15 minutes · Same-day appointments available</span>
+    <span id="heroPromise">Emergency service available · Same-day appointments on most calls</span>
   </div>
-  <p class="hero-location anim-fade-up d3" id="heroLocation">Serving <span>Chicago</span>, Berwyn, Oak Park, Evanston & suburbs</p>
+  <p class="hero-location anim-fade-up d3" id="heroLocation">Serving <span>Chicago</span>, Elmwood Park, Des Plaines & nearby suburbs</p>
   <div class="hero-ctas anim-fade-up d4">
-    <button class="btn-primary">Get a Free Quote</button>
-    <button class="btn-secondary">View All Services</button>
+    <button class="btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Get a Free Quote</button>
+    <button class="btn-secondary" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'})">View All Services</button>
   </div>
   <div class="review-badges anim-fade-in d5" id="reviewBadges">
-    <div class="review-badge"><div><div class="badge-logo">G Google</div><div class="badge-stars">★★★★★</div></div><div><div class="badge-rating">4.9</div><div class="badge-count">74 reviews</div></div></div>
-    <div class="review-badge"><div><div class="badge-logo yelp">★ Yelp</div><div class="badge-stars">★★★★★</div></div><div><div class="badge-rating">4.8</div><div class="badge-count">42 reviews</div></div></div>
-    <div class="review-badge"><div><div class="badge-logo bbb">BBB</div><div style="color:#fbbf24;font-size:11px;font-weight:700;">A+ Rating</div></div><div><div class="badge-rating" style="font-size:12px;">Accredited</div><div class="badge-count">Since 2006</div></div></div>
+    <div class="review-badge"><div><div class="badge-logo yelp">★ Yelp</div><div class="badge-stars">★★★★★</div></div><div><div class="badge-rating">4.5</div><div class="badge-count">28 reviews</div></div></div>
+    <div class="review-badge"><div><div class="badge-logo">Since</div><div class="badge-stars">Chicago</div></div><div><div class="badge-rating">1948</div><div class="badge-count">Family-owned</div></div></div>
+    <div class="review-badge"><div><div class="badge-logo bbb">PC#</div><div style="color:#fbbf24;font-size:11px;font-weight:700;">14636</div></div><div><div class="badge-rating" style="font-size:12px;">Licensed</div><div class="badge-count">Bonded & insured</div></div></div>
   </div>
   <div class="hero-trust anim-fade-in d5">
     <span class="trust-item"><span class="trust-dot"></span>Licensed & Insured</span>
@@ -363,10 +372,10 @@
 
 <!-- STATS -->
 <div class="stats" id="stats">
-  <div class="stat"><div class="stat-num" id="c1" data-target="50" data-suffix="+">0+</div><div class="stat-label">Years in Business</div></div>
+  <div class="stat"><div class="stat-num" id="c1" data-target="78" data-suffix="+">0+</div><div class="stat-label">Years in Business</div></div>
   <div class="stat"><div class="stat-num" style="color:#0570de">A+</div><div class="stat-label">BBB Rating</div></div>
-  <div class="stat"><div class="stat-num" id="c2" data-target="200" data-suffix="+">0+</div><div class="stat-label">Happy Customers</div></div>
-  <div class="stat"><div class="stat-num" id="c3" data-target="15" data-suffix="min">0min</div><div class="stat-label">Avg. Callback Time</div></div>
+  <div class="stat"><div class="stat-num" id="c2" data-target="28" data-suffix="+">0+</div><div class="stat-label">Public Reviews</div></div>
+  <div class="stat"><div class="stat-num" id="c3" data-target="90" data-suffix="min">0min</div><div class="stat-label">Rapid Emergency Response</div></div>
 </div>
 <!-- data-target values are patched by applyConfig() before the counters fire -->
 
@@ -417,6 +426,32 @@
 
 <div class="wave-divider" style="background:#fff;"><svg viewBox="0 0 1200 60" preserveAspectRatio="none" height="48"><path d="M0,30 C300,60 900,0 1200,30 L1200,60 L0,60 Z" fill="#f6f9fc"/></svg></div>
 
+<!-- HOW IT WORKS -->
+<section class="section" id="process" style="background:#f6f9fc;text-align:center;">
+  <div class="section-label reveal">How It Works</div>
+  <div class="section-title reveal">Simple, Local, Fast</div>
+  <p class="section-sub reveal" style="margin:0 auto 48px;">From urgent plumbing issues to larger planned projects, we keep the process clear and easy to act on.</p>
+  <div class="steps-grid" id="stepsGrid">
+    <article class="step-card reveal">
+      <div class="step-num">1</div>
+      <div class="step-title">Call the Right Office</div>
+      <div class="step-desc">Use our Chicago or suburban line and tell us whether you have an emergency, sewer issue, plumbing repair, or a larger project.</div>
+    </article>
+    <article class="step-card reveal">
+      <div class="step-num">2</div>
+      <div class="step-title">Get a Free Estimate</div>
+      <div class="step-desc">We talk through the problem, confirm the service area, and help you line up the right next step with no-pressure estimating.</div>
+    </article>
+    <article class="step-card reveal">
+      <div class="step-num">3</div>
+      <div class="step-title">Licensed Work Done Right</div>
+      <div class="step-desc">Our team completes the repair or installation with experienced workmanship, clean habits, and local accountability.</div>
+    </article>
+  </div>
+</section>
+
+<div class="wave-divider" style="background:#f6f9fc;"><svg viewBox="0 0 1200 60" preserveAspectRatio="none" height="48"><path d="M0,0 C400,60 800,0 1200,40 L1200,60 L0,60 Z" fill="#0a2540"/></svg></div>
+
 <!-- SERVICE AREA -->
 <section class="service-area" id="area">
   <div class="section-label reveal" style="text-align:center;">Where We Work</div>
@@ -462,13 +497,13 @@
   <div class="reputation-inner">
     <div class="reveal">
       <div class="rep-label" id="repLabel">Why Zuniga's</div>
-      <div class="rep-title" id="repTitle">Built on <span>50 Years</span> of Trust</div>
+      <div class="rep-title" id="repTitle">Built on <span>78 Years</span> of Trust</div>
       <div class="rep-accent"></div>
-      <p class="rep-intro" id="repIntro">Chicago's go-to plumber since 1975 — not because of marketing, because of results. Every job, every time.</p>
+      <p class="rep-intro" id="repIntro">Chicago customers keep calling Nuzzo because the work is licensed, straightforward, and backed by decades of local experience.</p>
       <div class="rep-stats">
-        <div class="rep-stat"><div class="rep-stat-num" id="rs1" data-target="50" data-suffix="+">0+</div><div class="rep-stat-lbl">Years serving Chicago</div></div>
-        <div class="rep-stat"><div class="rep-stat-num" id="rs2" data-target="200" data-suffix="+">0+</div><div class="rep-stat-lbl">5-star reviews</div></div>
-        <div class="rep-stat"><div class="rep-stat-num" id="rs3" data-target="15" data-suffix="min">0min</div><div class="rep-stat-lbl">Avg. callback time</div></div>
+        <div class="rep-stat"><div class="rep-stat-num" id="rs1" data-target="78" data-suffix="+">0+</div><div class="rep-stat-lbl">Years serving Chicago</div></div>
+        <div class="rep-stat"><div class="rep-stat-num" id="rs2" data-target="28" data-suffix="+">0+</div><div class="rep-stat-lbl">Public reviews</div></div>
+        <div class="rep-stat"><div class="rep-stat-num" id="rs3" data-target="90" data-suffix="min">0min</div><div class="rep-stat-lbl">Rapid emergency response</div></div>
         <div class="rep-stat"><div class="rep-stat-num"><span>A+</span></div><div class="rep-stat-lbl">BBB rating</div></div>
       </div>
     </div>
@@ -505,8 +540,8 @@
       <p class="faq-sub">Everything you need to know before you call.</p>
     </div>
     <div id="faqItems">
-    <div class="faq-item"><button class="faq-btn"><span class="faq-q-text">Do you offer free estimates?</span><div class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button><div class="faq-body"><div class="faq-answer">Yes — free quotes on all jobs. Call (773) 619-2730 or fill out the contact form and we'll get back within 15 minutes.</div></div></div>
-    <div class="faq-item"><button class="faq-btn"><span class="faq-q-text">Are you licensed and insured?</span><div class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button><div class="faq-body"><div class="faq-answer">City of Chicago License: 058170465 · Illinois State License: 055031744. Fully bonded and insured for residential and commercial work.</div></div></div>
+    <div class="faq-item"><button class="faq-btn"><span class="faq-q-text">Do you offer free estimates?</span><div class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button><div class="faq-body"><div class="faq-answer">Yes. Nuzzo Sewer & Plumbing offers free estimates. Call either office line and we will help you schedule the right next step.</div></div></div>
+    <div class="faq-item"><button class="faq-btn"><span class="faq-q-text">Are you licensed and insured?</span><div class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button><div class="faq-body"><div class="faq-answer">Yes. Nuzzo Sewer & Plumbing lists the business as licensed, bonded, and insured and publishes license number PC# 14636.</div></div></div>
     <div class="faq-item"><button class="faq-btn"><span class="faq-q-text">Do you offer same-day service?</span><div class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button><div class="faq-body"><div class="faq-answer">Yes. Trucks stocked daily. Most jobs are completed in a single visit. Call early for best same-day availability.</div></div></div>
     <div class="faq-item"><button class="faq-btn"><span class="faq-q-text">What areas do you serve?</span><div class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button><div class="faq-body"><div class="faq-answer">Chicago and all surrounding suburbs — Berwyn, Oak Park, Evanston, Cicero, Maywood, Bridgeview, Calumet City, South Holland, and more.</div></div></div>
     <div class="faq-item"><button class="faq-btn"><span class="faq-q-text">Do you handle residential and commercial?</span><div class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button><div class="faq-body"><div class="faq-answer">Yes — homes, commercial buildings, industrial properties, and high-rises throughout Chicago. No job too big or small.</div></div></div>
@@ -522,11 +557,12 @@
     <div class="reveal">
       <div class="section-label" style="color:#63b3ed;">Get In Touch</div>
       <div class="contact-heading">Request a Free Quote</div>
-      <p class="contact-sub">Fill out the form and we'll call back within 15 minutes. Or call us directly.</p>
+      <p class="contact-sub">Fill out the form and we will get back to you quickly to confirm the right next step. Or call us directly.</p>
       <div class="contact-detail"><div class="contact-detail-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div><div><div class="contact-detail-label">Phone</div><div class="contact-detail-text" id="contactPhone">(773) 619-2730</div></div></div>
-      <div class="contact-detail"><div class="contact-detail-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><div><div class="contact-detail-label">Email</div><div class="contact-detail-text" id="contactEmail">zunigaplumbing@yahoo.com</div></div></div>
-      <div class="contact-detail"><div class="contact-detail-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div><div class="contact-detail-label">Address</div><div class="contact-detail-text" id="contactAddress">7253 S. Green Street, Chicago, IL 60621</div></div></div>
-      <div class="contact-detail"><div class="contact-detail-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><div><div class="contact-detail-label">Hours</div><div class="contact-detail-text" id="contactHours">Mon–Fri: 8:00am – 5:00pm</div></div></div>
+      <div class="contact-detail"><div class="contact-detail-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div><div><div class="contact-detail-label">Suburban Line</div><div class="contact-detail-text" id="contactPhoneSecondary">(708) 456-7300</div></div></div>
+      <div class="contact-detail" id="contactEmailRow"><div class="contact-detail-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><div><div class="contact-detail-label">Email</div><div class="contact-detail-text" id="contactEmail"></div></div></div>
+      <div class="contact-detail"><div class="contact-detail-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div><div class="contact-detail-label">Address</div><div class="contact-detail-text" id="contactAddress">8619 W Leland Ave, Chicago, IL 60656</div></div></div>
+      <div class="contact-detail"><div class="contact-detail-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><div><div class="contact-detail-label">Hours</div><div class="contact-detail-text" id="contactHours">Emergency service available. Call for appointment scheduling.</div></div></div>
     </div>
     <div class="form-card reveal">
       <div class="form-row">
@@ -560,22 +596,22 @@
   <h2>Ready to Fix It Right?</h2>
   <p>Whether it's a leaky faucet or a plumbing emergency — we're here.</p>
   <a class="cta-phone" id="ctaPhone" href="tel:7736192730">(773) 619-2730</a>
-  <p class="cta-sub" id="ctaSub">Mon–Fri 8:00am–5:00pm · zunigaplumbing@yahoo.com</p>
+  <p class="cta-sub" id="ctaSub">Emergency service available. Call for appointment scheduling.</p>
   <div class="cta-btns">
-    <button class="btn-white">Call Now</button>
-    <button class="btn-outline-white">Request Free Quote</button>
+    <button class="btn-white" onclick="window.location.href='tel:7736256280'">Call Now</button>
+    <button class="btn-outline-white" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Request Free Quote</button>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer class="footer">
   <div>
-    <div class="footer-brand" id="footerBrand">Zuniga's <span>Plumbing</span> Inc.</div>
+    <div class="footer-brand" id="footerBrand">Nuzzo <span>Plumbing</span></div>
     <div class="footer-info" id="footerInfo">
-      7253 S. Green Street<br>
-      Chicago, IL 60621<br>
-      (773) 619-2730<br>
-      zunigaplumbing@yahoo.com
+      8619 W Leland Ave<br>
+      Chicago, IL 60656<br>
+      (773) 625-6280<br>
+      (708) 456-7300
     </div>
   </div>
   <div class="footer-cols">
@@ -605,8 +641,8 @@
   </div>
 </footer>
 <div class="footer-bottom">
-  <p id="footerCopyright">© 2026 Zuniga's Plumbing Inc. All rights reserved.</p>
-  <p id="footerLicense" style="color:rgba(255,255,255,0.18);font-size:11px;">City License: 058170465 · State License: 055031744</p>
+  <p id="footerCopyright">© 2026 Nuzzo Sewer & Plumbing. All rights reserved.</p>
+  <p id="footerLicense" style="color:rgba(255,255,255,0.18);font-size:11px;">License: PC# 14636 · Licensed, Bonded & Insured</p>
 </div>
 
 <script>
@@ -691,11 +727,11 @@
     var stickyPhone = document.getElementById('stickyPhone');
     if(stickyPhone){ stickyPhone.textContent = C.phone; stickyPhone.href = 'tel:'+C.phoneRaw; }
     var stickyPromise = document.getElementById('stickyPromise');
-    if(stickyPromise) stickyPromise.textContent = 'We call back within '+C.stats.callbackMin+' minutes';
+    if(stickyPromise) stickyPromise.textContent = C.heroPromise;
 
     // --- Nav ---
     var navBrand = document.getElementById('navBrand');
-    if(navBrand) navBrand.innerHTML = C.shortName.replace("'s Plumbing",'\'s <span>Plumbing</span>');
+    if(navBrand) navBrand.innerHTML = C.shortName.replace(' Plumbing',' <span>Plumbing</span>');
     var navCta = document.getElementById('navCta');
     if(navCta){ navCta.textContent = C.phone; navCta.href = 'tel:'+C.phoneRaw; }
 
@@ -708,6 +744,17 @@
     if(heroPromise) heroPromise.textContent = C.heroPromise;
     var heroLocation = document.getElementById('heroLocation');
     if(heroLocation) heroLocation.innerHTML = 'Serving <span>' + C.city + '</span>, ' + C.serviceArea.cities.slice(0,3).join(', ') + ' & suburbs';
+    var reviewBadges = document.getElementById('reviewBadges');
+    if(reviewBadges && C.reviewBadges && C.reviewBadges.length){
+      reviewBadges.innerHTML = C.reviewBadges.map(function(badge){
+        var theme = badge.theme === 'yelp' ? ' yelp' : badge.theme === 'bbb' ? ' bbb' : '';
+        var stars = badge.theme === 'yelp' ? '★★★★★' : '&nbsp;';
+        return '<div class="review-badge">'
+          + '<div><div class="badge-logo'+theme+'">'+badge.platform+'</div><div class="badge-stars">'+stars+'</div></div>'
+          + '<div><div class="badge-rating">'+badge.rating+'</div><div class="badge-count">'+badge.count+'</div></div>'
+          + '</div>';
+      }).join('');
+    }
 
     // --- Stats counters: update data-target values from config ---
     var c1 = document.getElementById('c1');
@@ -767,6 +814,18 @@
       areaGrid.innerHTML = pillsHtml;
     }
 
+    // --- How it works ---
+    var stepsGrid = document.getElementById('stepsGrid');
+    if(stepsGrid && C.howItWorks && C.howItWorks.length){
+      stepsGrid.innerHTML = C.howItWorks.map(function(step, index){
+        return '<article class="step-card reveal">'
+          + '<div class="step-num">'+(index + 1)+'</div>'
+          + '<div class="step-title">'+step.title+'</div>'
+          + '<div class="step-desc">'+step.desc+'</div>'
+          + '</article>';
+      }).join('');
+    }
+
     // --- FAQ items ---
     var faqItems = document.getElementById('faqItems');
     if(faqItems && C.faq && C.faq.length){
@@ -804,8 +863,17 @@
     // --- Contact section ---
     var contactPhone = document.getElementById('contactPhone');
     if(contactPhone) contactPhone.textContent = C.phone;
+    var contactPhoneSecondary = document.getElementById('contactPhoneSecondary');
+    if(contactPhoneSecondary) contactPhoneSecondary.textContent = C.secondaryPhone;
     var contactEmail = document.getElementById('contactEmail');
-    if(contactEmail) contactEmail.textContent = C.email;
+    var contactEmailRow = document.getElementById('contactEmailRow');
+    if(contactEmail){
+      if(C.email){
+        contactEmail.textContent = C.email;
+      } else if(contactEmailRow){
+        contactEmailRow.style.display = 'none';
+      }
+    }
     var contactAddress = document.getElementById('contactAddress');
     if(contactAddress) contactAddress.textContent = C.address.full;
     var contactHours = document.getElementById('contactHours');
@@ -815,20 +883,74 @@
     var ctaPhone = document.getElementById('ctaPhone');
     if(ctaPhone){ ctaPhone.textContent = C.phone; ctaPhone.href = 'tel:'+C.phoneRaw; }
     var ctaSub = document.getElementById('ctaSub');
-    if(ctaSub) ctaSub.textContent = C.hours + ' · ' + C.email;
+    if(ctaSub) ctaSub.textContent = C.hours;
 
     // --- Footer ---
     var footerBrand = document.getElementById('footerBrand');
-    if(footerBrand){
-      var parts = C.name.split("'s Plumbing");
-      footerBrand.innerHTML = parts[0]+"'s <span>Plumbing</span>"+parts[1];
-    }
+    if(footerBrand) footerBrand.innerHTML = C.shortName.replace(' Plumbing',' <span>Plumbing</span>');
     var footerInfo = document.getElementById('footerInfo');
-    if(footerInfo) footerInfo.innerHTML = C.address.street+'<br>'+C.address.city+', '+C.address.state+' '+C.address.zip+'<br>'+C.phone+'<br>'+C.email;
+    if(footerInfo){
+      var footerLines = [
+        C.address.street,
+        C.address.city+', '+C.address.state+' '+C.address.zip,
+        C.phone,
+        C.secondaryPhone
+      ];
+      if(C.email) footerLines.push(C.email);
+      footerInfo.innerHTML = footerLines.join('<br>');
+    }
     var footerCopyright = document.getElementById('footerCopyright');
     if(footerCopyright) footerCopyright.textContent = '© '+C.footerCopyright+' '+C.name+'. All rights reserved.';
     var footerLicense = document.getElementById('footerLicense');
-    if(footerLicense) footerLicense.textContent = 'City License: '+C.licenseCity+' · State License: '+C.licenseState;
+    if(footerLicense) footerLicense.textContent = 'License: '+C.licenseCity+' · '+C.licenseState;
+
+    // --- Structured data ---
+    var localBusinessSchema = document.getElementById('localBusinessSchema');
+    if(localBusinessSchema){
+      localBusinessSchema.textContent = JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Plumber",
+        name: C.name,
+        description: C.meta.description,
+        telephone: C.phone,
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: C.address.street,
+          addressLocality: C.address.city,
+          addressRegion: C.address.state,
+          postalCode: C.address.zip,
+          addressCountry: "US"
+        },
+        foundingDate: "1948",
+        areaServed: [C.serviceArea.primary].concat(C.serviceArea.cities),
+        makesOffer: (C.schemaServices || []).map(function(service){
+          return {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: service
+            }
+          };
+        })
+      });
+    }
+    var faqSchema = document.getElementById('faqSchema');
+    if(faqSchema && C.faq){
+      faqSchema.textContent = JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: C.faq.map(function(item){
+          return {
+            "@type": "Question",
+            name: item.q,
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: item.a
+            }
+          };
+        })
+      });
+    }
   }
 
   // Run applyConfig, then re-attach FAQ listeners (FAQ may have been rebuilt)
